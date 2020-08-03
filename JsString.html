@@ -1,0 +1,168 @@
+<html>
+
+<body>
+    <h1 style="text-align: center;">String Object</h1>
+    <h2>length; string length</h2>
+    <p id="len">this sentence is </p>
+
+    <hr>
+
+    <h2>toUpperCase(); changes the string to uppercase</h2>
+    <p id="toUp">i am uppercase hehe</p>
+
+    <hr>
+
+    <h2>toLowerCase(); changes the string to lowercase</h2>
+    <p id="toLow">i am LOWERCASE augh</p>
+    
+    <hr>
+    
+    <h2>charAt(); returns the first character that correspond to the index from the parameter</h2>
+    <p id="charsAt">the fifth char in this sentence is  :</p>
+    
+    <hr>
+    
+    <h2>indexOf(); the index of the first match</h2>
+    <p id="Indexof">iam a sentence 555; the index of the first 5 is : </p>
+    
+    <hr>
+    
+    <h2>lastIndexOf(); the opposite of indexof</h2>
+    
+    <hr>
+    
+    <h2>substring(number,number);return characters between 2 index numbers , the first number is included the last is not</h2>
+    <p id="subs">Hellow world, substring(1,6)=</p>
+    
+    <hr>
+    
+    <h2>split(string): it splits the string each time it is found</h2>
+    <p id="split">ab/dw/gt/ki/bgc/cd , split('/')= array with length of </p>
+    
+    <hr>
+    
+    <h2>trim(); remove white spaces from start and end of string</h2>
+    
+    <hr>
+    
+    <p id="replace">Hello Microsoft!</p>
+    <button onclick="replaceF()">replace Microsoft with Jama3a</button>
+    
+    
+    
+    <hr>
+    <h1 style="text-align: center;">Number Object</h1>
+    <hr>
+    
+    <h2>isNan(); the value is not a number</h2>
+    <p id="nan">is 9wd4wd5 Nan =</p>
+    
+    <hr>
+    
+    <h2>tofixed(); round to specified number of decimal places</h2>
+    <p id="tofix">589,48494.toFixed(2) = </p>
+    
+    <hr>
+    
+    <h2>toPrecision(); round to total number of places</h2>
+    <p id="toPre">589,48494.toPre() = </p>
+    
+    <hr>
+    
+    <h2>toExponential(); the exponential notation of a specified number.</h2>
+    <p id="toExpo">589,48494.toExponential() = </p>
+    
+    
+    <h1 style="text-align: center;">Math Object</h1>
+    
+    <hr>
+    
+    <h2>Math.PI</h2>
+    <p id="MathPI"></p>
+    
+    <hr>
+    
+    <h2>Math.round()</h2>
+    <p id="mathround">Math.round(2.5)=</p>
+    
+    
+    Bruh theres a lot of shit here is a link that can help u
+    <a href="https://www.w3schools.com/jsref/jsref_obj_math.asp">Ayyyy</a>
+    
+    <hr>
+    <h1 style="text-align: center">Date Object</h1>
+    <hr>
+    
+    <h2>.getDate()/.setDate(); returns day of month</h2>
+    <p id="getdate"></p>
+    
+    <hr>    
+    <h2>.getDay(); returns day of week</h2>
+    <p id="getday"></p>
+    
+    <hr>
+    <h2>getTime(); returns number of milliseconds since january 1970 1</h2>
+    
+    
+    <script>
+        var len = document.getElementById('len');
+        len.textContent += len.textContent.length + ' chars';
+
+        var toUp = document.getElementById('toUp');
+        toUp.textContent = toUp.textContent.toUpperCase();
+        
+        var toLow = document.getElementById('toLow');
+        toLow.textContent = toLow.textContent.toLowerCase();
+        
+        var charsAt = document.getElementById('charsAt');
+        charsAt.textContent += charsAt.textContent.charAt(5);
+        
+        var indexOF = document.getElementById('Indexof');
+        indexOF.textContent += indexOF.textContent.indexOf('5');
+        
+        var subs = document.getElementById('subs');
+        subs.textContent += subs.textContent.substring(1,6);
+        
+        var split = document.getElementById('split');
+        split.textContent += split.textContent.split('/').length;
+        
+        var replace = document.getElementById('replace');
+        function replaceF(){
+             replace.textContent = replace.textContent.replace('Microsoft','Jma3a');
+        }
+        
+        
+        //number Object
+        
+        
+        var num = '9wd4wd5';
+        document.getElementById('nan').textContent += isNaN(num);
+        
+        var fixed =589.48494;
+        document.getElementById('tofix').textContent += fixed.toFixed(2);
+        
+        var pres =589.48494;
+        document.getElementById('toPre').textContent += pres.toPrecision(3);
+        
+        var ToExpo =589.48494;
+        document.getElementById('toExpo').textContent += pres.toExponential(); 
+        
+        
+        //math object
+        
+        document.getElementById('MathPI').textContent = Math.PI;
+        
+        
+        document.getElementById('mathround').textContent += Math.round(2.5) ;
+        
+        //date Object
+        
+        var date = new Date();
+        
+        document.getElementById('getdate').textContent = date.getDate();
+        
+        document.getElementById('getday').textContent = date.getDay();
+        
+        
+    </script>
+</body></html>

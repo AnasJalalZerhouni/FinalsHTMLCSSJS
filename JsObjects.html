@@ -1,0 +1,91 @@
+<html>
+
+<body>
+    <h1 style="text-align: center;">JS Objects</h1>
+    <hr>
+    <h2 style="text-align: center">Window objects</h2>
+    <hr>
+    <h3 id="windowHeight">window.innerHeight; </h3>
+    <p>height of window</p>
+    <hr>
+    <h3 id="windowWidth">window.innerWidth; </h3>
+    <p>width of window</p>
+    <hr>
+    <h3 id="windowWidth">window.innerWidth; </h3>
+    <p>width of window</p>
+    <hr>
+    <button onclick="PageXYoffsets()">pageXOffset and pageYOffset</button>
+    <p>scrolled distance on the X and Y axis</p>
+
+    <hr>
+    <button onclick="screenXandY()">screenX and screenY</button>
+    <p>X and Y coordinates of pointer</p>
+
+    <hr>
+    <h3 id="windURL">window.location; </h3>
+    <p>current URL of window object</p>
+
+    <hr>
+    <h3 id="screenHandW">window.screen.height :</h3>
+    <p>screen height or width</p>
+
+
+    <hr>
+    <h3>alert();</h3>
+    <button onclick="alert('this is alert box');">alert box</button>
+
+    <hr>
+    <h3>open();</h3>
+    <button onclick="window.open('https://www.google.com');">window.open()</button>
+    <p>if your browser has pop-up blocking this wont work</p>
+
+    <hr>
+    <h3>print();</h3>
+    <button onclick="window.print();">window.print()</button>
+    <p>print the content of the page</p>
+    
+    <h2 style="text-align: center;">document object</h2>
+    
+    <h3 id="documentDomain">document.domain; </h3>
+    <p>website domain</p>
+    
+    <hr />
+    
+    <h3>document.getElementById('')</h3>
+    <p>gets ellement by id</p>
+    <h3>document.querySelectorAll('')</h3>
+    <p>get elementS that match a css selector</p>
+    
+    
+    
+    
+    
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script>
+        var windowHeight = document.getElementById('windowHeight');
+        windowHeight.textContent += window.innerHeight;
+
+        var windowWidth = document.getElementById('windowWidth');
+        windowWidth.textContent += window.innerWidth;
+
+
+        function PageXYoffsets() {
+            alert("pageXOffset: " + window.pageXOffset + ", pageYOffset: " + window.pageYOffset);
+        }
+
+
+        function screenXandY() {
+            alert("screenX: " + window.screenX + ", screenY: " + window.screenY);
+        }
+
+        var winURl = document.getElementById('windURL');
+        winURl.textContent += window.location;
+
+        var screenWandH = document.getElementById('screenHandW');
+        screenWandH.textContent += window.screen.width;
+        
+        var documentDomain = document.getElementById('documentDomain');
+        documentDomain.textContent += document.domain;
+    </script>
+</body></html>

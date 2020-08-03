@@ -1,0 +1,282 @@
+<html>
+
+<head>
+
+    <style>
+        .Content:before {
+            content: "Foo bar";
+        }
+
+        .clearFix {
+            background-color: yellow;
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        li {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 style="text-align: center;">Typography</h1>
+
+    <h2>column-count:3</h2>
+    <div style="column-count: 3;">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+    </div>
+
+
+    <h2>column-gap: normal;</h2>
+    <div style="column-count: 3;column-gap: 130px">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+    </div>
+
+    <h2>content: "Foo bar";</h2>
+    <p class="Content">
+        Hello world
+    </p>
+
+    <h2>Cursor</h2>
+    <button style="cursor: default;">Default</button>
+    <button style="cursor: auto;">auto</button>
+    <button style="cursor: pointer;">pointer</button>
+    <button style="cursor: move;">move</button>
+    <button style="cursor: crosshair;">crosshair</button>
+
+    <h2>Display</h2>
+
+    <p>display:none; hide element</p>
+    <p>display: inline; Any height and width applied will have no effect.</p>
+    <p>display: block;</p>
+    <p>display: inline-block; The element shares properties of both an inline and a block element:
+
+        inline because the element behaves like simple text, and inserts itself in a block of text
+        Block because you can apply height and width values
+        For example, this element has:</p>
+
+    <p>display: list-item;The element behaves like a list item: li. The only difference with block is that a list item has a bullet point.</p>
+    <p>display: table; The element behaves like a table</p>
+
+
+    <h2>float</h2>
+    <div style="background-color: yellow;">
+        <p class="clearFix">
+            <img style="float: right;display: block;" width="400px" src="https://icdn6.themanual.com/image/themanual/connor-the-puggle-puppy-photo-credit-dan-baker-768x768.jpg" />
+            float:right; :Lorewnef ewfiw enfnwefier gtrphpytojyto jtoy jpytoj yto jrejnw eurw rwue rwerjwefherb rbrthytjfd
+        </p>
+    </div>
+    <br>
+    <p class="clearFix">
+        <img style="float: left" width="400px" src="https://icdn6.themanual.com/image/themanual/connor-the-puggle-puppy-photo-credit-dan-baker-768x768.jpg" />
+        float:left; (With ClearFix) :Lorewnef ewfiw enfnwefier gtrphpytojyto jtoy jpytoj yto jrejnw eurw rwue rwerjwefherb rbrthytjfd
+    </p>
+
+    <h2>List</h2>
+    <h3>list-style-image</h3>
+    <h4>list-style-image:none</h4>
+    <ul style="list-style-image: none;">
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+    </ul>
+
+    <h4>list-style-image: url("https://cssreference.io/images/list-style-image.png");</h4>
+    <ul style='list-style-image: url("https://cssreference.io/images/list-style-image.png");'>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+    </ul>
+    <h3>list-style-position</h3>
+    <h4>list-style-position:outside</h4>
+
+    <ul style='list-style-image: url("https://cssreference.io/images/list-style-image.png");'>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+    </ul>
+
+    <h4>list-style-position:inside</h4>
+
+    <ul style='list-style-position: inside;list-style-image: url("https://cssreference.io/images/list-style-image.png");'>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+    </ul>
+
+    <h3>list-style-type</h3>
+    <h4>list-style-type:upper-latin: none</h4>
+    <ul style='list-style-type:upper-latin;'>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+    </ul>
+
+    <h4>list-style-type:upper-latin: none</h4>
+    <ul style='list-style-type:none;'>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+    </ul>
+
+
+    <h2>opacity</h2>
+
+    <div style="height: 300px;background-color: yellow;opacity: 0.5;display: flex;justify-content: center;align-items: center;">
+        opactiy 0.5
+    </div>
+
+    <h2>Overflow</h2>
+    <h3>overflow-y:scroll</h3>
+    <div style="width: 100px;height:100px;background-color: yellow;overflow: scroll">
+        dskwaojfasoiklsrjoiwq ka hrio hrioweh urweiuerguregregrejg auege tuae aeur aue griye auig aeiurg aerogjaierug 9eairg9uieraih
+    </div>
+
+    <h3>overflow-y:hidden</h3>
+    <div style="width: 100px;height:100px;background-color: yellow;overflow: hidden">
+        dskwaojfasoiklsrjoiwq ka hrio hrioweh urweiuerguregregrejg auege tuae aeur aue griye auig aeiurg aerogjaierug 9eairg9uieraih
+    </div>
+
+    <h2>Resize</h2>
+    <h3>resize:horizontal</h3>
+    <textarea style="resize: horizontal"></textarea>
+
+    <h3>resize:none</h3>
+    <textarea style="resize: none"></textarea>
+
+    <h2>vertical align</h2>
+    <b>baseline</b>
+    <p>An <img style="vertical-align: baseline" class="a" src="https://www.w3schools.com/cssref/sqpurple.gif" width="9" height="9"> image with a default alignment.</p>
+
+
+    <b>sub</b>
+    <p>An <img style="vertical-align: sub" class="a" src="https://www.w3schools.com/cssref/sqpurple.gif" width="9" height="9"> image with a default alignment.</p>
+
+    <b>super</b>
+    <p>An <img style="vertical-align: super" class="a" src="https://www.w3schools.com/cssref/sqpurple.gif" width="9" height="9"> image with a default alignment.</p>
+
+    <h1 style="text-align: center;">Transform</h1>
+
+    <div style="width: 100px;height:100px;background-color: yellow;transform: translateX(40px)">trasform: translateX(40px)</div>
+
+    <div style="width: 100px;height:100px;background-color: yellow;transform: scaleX(1.2) translateX(40px)">trasform: scaleX(1.2)</div>
+
+    <div style="width: 100px;height:100px;background-color: yellow;transform: rotate(45deg) translateX(40px)">trasform: scaleX(1.2)</div>
+    <div style="width: 100px;height:100px;background-color: yellow;transform: skewX(45deg) translateX(40px)">transform: skewX(15deg);</div>
+
+
+    <hr>
+
+    <h1 style="text-align: center;">TypoGraphy</h1>
+    <h2 style="text-align: center;">Colors:</h2>
+    <h3 style="color: red;">Color:red;</h3>
+    <h3 style="color: rgba(50,115,120,0.8);">color: rgba(50,115,120,0.8);</h3>
+    <h3 style="color: hsl(14, 100%, 53%);">color: hsl(14, 100%, 53%);</h3>
+    <h3 style="color: hsla(14, 100%, 53%, 0.6);">color: hsla(14, 100%, 53%, 0.6);</h3>
+
+    <h2 style="text-align: center;">font-family:</h2>
+    <h3 style='font-family: "Source Sans Pro", "Arial", sans-serif;'>font-family: "Source Sans Pro", "Arial", sans-serif;</h3>
+
+    <h2 style="text-align: center;">Font-size:</h2>
+    <h3 style="font-size: medium;">medium;</h3>
+    <h3 style="font-size: 20px;">20px</h3>
+    <h3 style="font-size:x-large;">x-large</h3>
+
+    <h2 style="text-align: center">font-style:</h2>
+    <h3 style="font-style: italic;">font-style: italic;</h3>
+    <h3 style="font-style: oblique;">font-style: oblique;</h3>
+
+
+    <h2 style="text-align: center">font-variant:</h2>
+    <h3 style="font-variant:small-caps;">font-variant:small-caps;</h3>
+
+    <h2 style="text-align: center;">font-weight:</h2>
+    <h3 style="font-weight: 600">600</h3>
+    <h3 style="font-weight: bold">bold</h3>
+    <h3 style="font-weight: 900">900 AKA ULTRA BOLD </h3>
+    <h3 style="font-weight: lighter">lighter; </h3>
+
+    <h2 style="text-align: center;">letter-spacing:</h2>
+    <h3 style="letter-spacing: 15px;">15px</h3>
+
+    <h2 style="text-align: center;">line-height:</h2>
+    <h3 style="line-height: 1.6;">1.6
+        <br>psaclp`dlw`dplawdplap`dla`dlwpawdladplawdplaw`pld`wa`dplaw`lda <br>
+        adlw,dowdkwaodjawidjawidjmawidnawidknawidjdia
+    </h3>
+
+    <h3 style="line-height: 13px;">13px
+        <br>psaclp`dlw`dplawdplap`dla`dlwpawdladplawdplaw`pld`wa`dplaw`lda <br>
+        adlw,dowdkwaodjawidjawidjmawidnawidknawidjdia
+    </h3>
+
+    <h3 style="line-height: 30px;">30px
+        <br>psaclp`dlw`dplawdplap`dla`dlwpawdladplawdplaw`pld`wa`dplaw`lda <br>
+        adlw,dowdkwaodjawidjawidjmawidnawidknawidjdia
+    </h3>
+
+    <h2 style="text-align: center;">text-align:</h2>
+    <h3 style="text-align: left">left</h3>
+    <h3 style="text-align: right">rigth</h3>
+    <h3 style="text-align: center">center</h3>
+
+
+    <h2 style="text-align: center">text-decoration</h2>
+    <h3 style="text-decoration:none">none</h3>
+    <h3 style="text-decoration: underline">underline</h3>
+    <h3 style="text-decoration: line-through">line-through</h3>
+    <h3 style="text-decoration: overline">overline</h3>
+    
+    
+    <h2 style="text-align: center">text-indent</h2>
+    <h3 style="text-indent: 0;">0 ;lorem ipsum badam gamadlwdw fewfe</h3>
+    <h3 style="text-indent: 40px;">40px; lorem ipsum badam gamadlwdw fewfe<br>awdawfgredgdb erg aerg dawdawdawdadawdwadawd</h3>
+    
+    <h2 style="text-align: center">text-overflow</h2>
+    Clip:
+    <div style="font-size: 50px;width: 70px;white-space: nowrap;background-color: aqua;text-overflow: clip;overflow: hidden">
+        hahaha ahwdawu  ewl opeeraf fnior ewdad
+    </div>
+    ellipsis:
+    <div style="font-size: 50px;width: 70px;white-space: nowrap;background-color: aqua;text-overflow: ellipsis;overflow: hidden">
+        hahaha ahwdawu  ewl opeeraf fnior ewdad
+    </div>
+    
+    
+    <h2 style="text-shadow: none;">text-shadow</h2>
+    <h3 style="text-shadow: 2px 6px;">2px 6px;</h3>
+    <h3 style="text-shadow: 2px 6px red;">2px 6px red;</h3>
+    <h3 style="text-shadow: 2px 6px 10px red;">2px 6px 10px red;</h3>
+    
+    <h2 style="text-align: center;">text-transform:</h2>
+    <h3 style="text-transform: none;">none</h3>
+    <h3 style="text-transform: capitalize;">capitalize ; this is a capitalized text okay</h3>
+    <h3 style="text-transform: uppercase;">uppercase ; this is a capitalized text okay</h3>
+    <h3 style="text-transform: lowercase;">lowercase ; this is a capitalized text okay</h3>
+    
+    <h2 style="text-align: center;">white-space:</h2>
+    <div style="white-space: normal;background-color: aqua;width: 100px;">
+        normal;
+        datadagdw djwadhw qudq widhqwidhqw duqwudh qwieuqw  qwehq wehqwjjj hqwudhfywf fw fef wefeebtyjyuotgythaemeiyumkntybgebte 
+    </div>
+    <br>
+    <div style="white-space: nowrap;background-color: aqua;width: 100px;">
+        nowrap;
+        datadagdw djwadhw qudq widhqwidhqw duqwudh qwieuqw  qwehq wehqwjjj hqwudhfywf fw fef wefeebtyjyuotgythaemeiyumkntybgebte 
+    </div>
+    
+    <h2 style="text-align: center">word-break</h2>
+    <div style="background-color: aqua;width: 100px;word-break: normal;">
+    normal;waaeghgrtshrstgegrgsthsrthsryjhyrsjtyjtjsj
+    </div>
+    <br>
+    <div style="background-color: aqua;width: 100px;word-break: break-all;">
+        break-all;efwfeokrjgeoirjireojfierfjowiereggwgergergagag
+    </div>
+    
+    <h2 style="text-align: center;">word-spacing</h2>
+    <h3 style="word-spacing: 50px;">word-spacing: 5px;salam cava kolchi mzyan</h3>
+</body></html>

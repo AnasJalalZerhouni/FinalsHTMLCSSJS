@@ -1,0 +1,283 @@
+<html>
+
+<head>
+    <style>
+        .center {
+            text-align: center;
+        }
+
+        /*----------------------Keyframes-------------------*/
+
+
+        /*---Simple Keyframe---*/
+        @keyframes example1 {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+        /* The element to apply the animation to */
+        .ChangeColor1 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            animation-name: example1;
+            animation-duration: 4s;
+        }
+
+
+        /*---using percentage keyframes----*/
+
+        /* The animation code */
+        @keyframes example2 {
+            0% {
+                background-color: red;
+            }
+
+            25% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+
+        .ChangeColor2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            animation-name: example2;
+            animation-duration: 4s;
+        }
+
+
+        /*---Animation Delay----*/
+        @keyframes example3 {
+            0% {
+                background-color: red;
+                left: 0;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 100px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+            }
+
+            100% {
+                background-color: green;
+                left: 0px;
+            }
+        }
+
+
+        .AnimationDealy {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: green;
+            animation-name: example3;
+            animation-duration: 4s;
+            animation-delay: 2s;
+        }
+
+
+
+        /*---Animation loop----*/
+        @keyframes example4 {
+            from {
+                background-color: red;
+                left: 0;
+            }
+
+            to {
+                background-color: yellow;
+                left: 600px;
+            }
+        }
+
+
+        .AnimationLoop {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: yellow;
+            animation-name: example4;
+            animation-duration: 4s;
+            animation-iteration-count: 10
+        }
+
+
+        /*---Animation direction ----*/
+        @keyframes example5 {
+            from {
+                background-color: red;
+                left: 0;
+            }
+
+            to {
+                background-color: yellow;
+                left: 600px;
+            }
+        }
+
+
+        .AnimationDirection {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: yellow;
+            animation-name: example5;
+            animation-duration: 4s;
+            animation-iteration-count: 2;
+            animation-direction: normal;
+        }
+
+
+        /*---Animation Curve Speed ----*/
+        @keyframes example6 {
+            from {
+                background-color: red;
+                left: 0;
+            }
+
+            to {
+                background-color: yellow;
+                left: 600px;
+            }
+        }
+
+
+        .AnimationCurveSpeed {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: yellow;
+            animation-name: example6;
+            animation-duration: 4s;
+            animation-timing-function: ease;
+        }
+
+        /*---Animation Curve Speed ----*/
+        @keyframes example7 {
+            from {
+                background-color: red;
+                left: 0;
+            }
+
+            to {
+                background-color: yellow;
+                left: 600px;
+            }
+        }
+
+
+        .AnimationFillMode {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: yellow;
+            animation-name: example7;
+            animation-duration: 4s;
+            animation-timing-function: ease;
+            animation-fill-mode: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="center">Animation</h1>
+    <hr>
+
+    <h2>First Example (Keyframes)</h2>
+    <div class="ChangeColor1"></div>
+
+    <h2>First Example (Keyframes using percentages)</h2>
+    <div class="ChangeColor2"></div>
+
+
+    <hr />
+
+    <h2>Animation delay</h2>
+    <p>delay 2s before animation starts</p>
+    <br>
+    <br>
+    <div class="AnimationDealy"></div>
+
+
+    <hr />
+
+    <h2>Animation iteration</h2>
+    specifies nbs of times an animation should run (this thang will run 10 times)
+    <br>
+    <br>
+    <div class="AnimationLoop"></div>
+    <br>
+    <br>
+    this thang will run for eternity
+    <br>
+    <br>
+    <div class="AnimationLoop" style="animation-iteration-count: infinite"></div>
+
+
+    <hr>
+    <h2>Animation direction </h2>
+    Normal
+    <div class="AnimationDirection"></div>
+    <br>
+
+    Reverse
+    <div class="AnimationDirection" style="animation-direction: reverse;"></div>
+
+    alternate
+    <div class="AnimationDirection" style="animation-direction: alternate;"></div>
+    <hr>
+
+
+    <hr>
+    <h2>Animation-timing-function (speed curve)</h2>
+
+    <br>
+    linear
+    <div class="AnimationCurveSpeed" style="animation-timing-function: linear"></div>
+
+    <br>
+    ease
+    <div class="AnimationCurveSpeed" style="animation-timing-function: ease"></div>
+
+    <br>
+    ease-in
+    <div class="AnimationCurveSpeed" style="animation-timing-function: ease-in"></div>
+
+    <br>
+    ease-out
+    <div class="AnimationCurveSpeed" style="animation-timing-function: ease-out"></div>
+
+    <br>
+    ease-in-out
+    <div class="AnimationCurveSpeed" style="animation-timing-function: ease-in-out"></div>
+
+
+    <hr>
+
+    <h2>fill-mode For an Animation (retain the styles values after the specific keyframe)</h2>
+    none
+    <div class="AnimationFillMode"></div>
+    
+    <br>
+    forwards
+    <div class="AnimationFillMode" style="animation-fill-mode: forwards"></div>
+</body></html>

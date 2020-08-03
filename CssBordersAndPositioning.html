@@ -1,0 +1,367 @@
+<html>
+    <head>
+    <style>
+        /*-------------------- Borders ----------------------*/
+        div {
+            background-color: yellow;
+            padding: 15px;
+        }
+
+        .BorderWidth {
+            border-bottom-style: solid;
+            border-bottom-width: 6px;
+        }
+
+        .BoxSizing {
+            border: 5px solid black;
+            padding: 10px;
+            width: 600px;
+            box-sizing: content-box;
+        }
+
+        .lineHeight {
+            line-height: normal;
+        }
+
+        .MaxHeight {
+            max-height: none;
+        }
+
+        table,
+        td {
+            border: 6px solid black;
+            border-top-color: red;
+            border-bottom-color: chartreuse;
+            border-right-color: darkorange;
+            border-left-color: black;
+            width: 300px;
+        }
+
+        .BoxShadows{
+            
+        }
+        /*-------------Positioning ------------------*/
+
+        .Postioning {
+            position: static;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center">Borders</h1>
+    <hr>
+    <h2>border width</h2>
+    <div class="BorderWidth">
+        <p>border-bottom-width: 6px; </p>
+    </div>
+
+    <br>
+
+    <div class="BorderWidth" style="border-style: solid;border-width: 1px;">
+        <p>border-width: 1px; </p>
+    </div>
+
+    <br>
+
+    <div class="BorderWidth" style="border-style: solid;border-width: 2px 0;">
+        <p>border-width: 2px 0px; </p>
+    </div>
+
+    <h2>border-raduis</h2>
+
+    <div class="MaxHeight" style="border-style: solid;border-radius: 100px;">
+        <h4>Border raduis 100px</h4>
+        <p>If the content does not fit within the maximum height, it will overflow.</p>
+        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.</p>
+    </div>
+    <br>
+    <div class="MaxHeight" style="border-style: solid;border-top-left-radius:  100px;">
+        <h4>Border raduis 100px</h4>
+        <p>If the content does not fit within the maximum height, it will overflow.</p>
+        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.</p>
+    </div>
+
+
+    <h2>border-color:red</h2>
+    <div class="MaxHeight" style="border-style: solid;border-color: red;">
+        <h4>Border color red</h4>
+        <p>If the content does not fit within the maximum height, it will overflow.</p>
+        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.</p>
+    </div>
+
+
+    <h2>border-color:red</h2>
+    <div class="MaxHeight" style="border-style: solid;border-color: #ccc;">
+        <h4>Border color #ccc</h4>
+        <p>If the content does not fit within the maximum height, it will overflow.</p>
+        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.</p>
+    </div>
+
+    <h2>border collapse</h2>
+    border-colllaps:seperate;
+    <table>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+
+    </table>
+
+    border-colllaps:collapse;
+    <table style="border-collapse:collapse;">
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+
+    </table>
+    
+    
+    <h2>box shadow</h2>
+    <br>
+    <div style="background-color: aqua;width: 500px;height: 200px;box-shadow: 2px 6px;">
+        2px 6px
+    </div>
+    <br>
+    <div style="background-color: aqua;height: 200px;box-shadow: 2px 6px red;">
+        2px 6px red
+    </div>
+    
+    <br>
+    <div style="background-color: aqua;height: 200px;box-shadow: 2px 6px 10px red;">
+       2px 6px 10px red
+    </div>
+    
+        <br>
+    <div style="background-color: aqua;height: 200px;box-shadow: 2px 4px 10px 4px red;">
+       2px 6px 10px red
+    </div>
+    <hr>
+<br>
+    <h2>box sizing</h2>
+
+    <div class="BoxSizing">
+        <p>content-box</p>
+        <p>The width and height of the element only apply to the content of the element.</p>
+        <p>so the width of this div is 600px + (5px (border width) + 10px (padding))*2 = 630</p>
+    </div>
+
+    <br />
+
+    <div class="BoxSizing" style="box-sizing: border-box;">
+        <p>border-box></p>
+        <p>the width and height of the element apply to all parts of the element:</p>
+        <p>so if width is 600px it's 600px</p>
+    </div>
+
+    <hr>
+
+    <h2>line height</h2>
+    <div class="lineHeight">
+        <h4>normal</h4>
+        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.</p>
+    </div>
+
+    <div class="lineHeight" style="line-height: 1.6">
+        <h4>1.6</h4>
+        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.</p>
+    </div>
+
+    <div class="lineHeight" style="line-height: 0.8em;">
+        <h4>1.6</h4>
+        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.</p>
+    </div>
+
+
+    <hr>
+
+    <h2>MAX-HEIGTH and max-width</h2>
+    <div class="MaxHeight">
+        <h4>none</h4>
+        <p>The element has no limit in terms of height.</p>
+        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our pharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our pharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our pharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our pharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our pharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.</p>
+    </div>
+
+
+    <div class="MaxHeight" style="max-height: 100px;">
+        <h4>100px</h4>
+        <p>If the content does not fit within the maximum height, it will overflow.</p>
+        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our pharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through when our pharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="MaxHeight" style="max-width: 100px;">
+        <h4>100px</h4>
+        <p>If the content does not fit within the maximum height, it will overflow.</p>
+        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our pharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through when our pharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.</p>
+    </div>
+
+
+
+    <h1 style="text-align: center">Positioning</h1>
+
+    <div class="Postioning">
+        <h2>static</h2>
+        <p>it will not react to top bottom left right.. and it will not act as an anchor point</p>
+        rms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our pharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through when our pharms of pleasure of the moment, s
+
+        <div style="background-color: red;width: 20%;right: -100px;">
+
+        </div>
+    </div>
+    <br>
+    <div class="Postioning" style="position: relative;right: -100px;">
+        <h2>relative</h2>
+        <p>it will remain in the natural flow of the page ,it will react to Top bottom left right and it will act as an anchor for the absolute element inside of it </p>
+        rms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our pharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through when our pharms of pleasure of the moment, s
+
+        <div style="background-color: red;">
+
+        </div>
+    </div>
+
+    <br>
+
+    <div class="Postioning" style="width: 300px;position: sticky;top: 0;left: 500px;">
+        <h2>position :sticky</h2>
+    </div>
+    <br>
+    <div class="Postioning" style="position: absolute;right: -100px;">
+        <h2>absolute</h2>
+        <p>The element will not remain in the natural flow of the page. It will position itself according to the closest positioned ancestor.
+            Because it's positioned, it will act as an anchor point for the absolutely positioned pink block. </p>
+        rms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our pharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through when our pharms of pleasure of the moment, s
+
+        <div style="background-color: red;width: 20%;right: -100px;">
+
+        </div>
+    </div>
+    <div class="Postioning" style="position: fixed;top: 0;">
+        <h2>position :fixed</h2>
+    </div>
+
+
+
+
+    <br>
+    <div class="Postioning" style="height: 200px; position: relative;top: 250px;">
+
+        <div style="background-color: red;width: 20%;position: absolute;left: 100px;">
+            <h2>Left 100px absolute</h2>
+        </div>
+    </div>
+    <br>
+    <div class="Postioning" style="height: 200px; position: relative;top: 250px;">
+
+        <div style="background-color: red;width: 20%;position: absolute;left: -50px;">
+            <h2>Left -50px absolute</h2>
+        </div>
+    </div>
+
+    <br>
+    <div class="Postioning" style="height: 200px; position: relative;top: 250px;">
+
+        <div style="background-color: red;width: 20%;position: absolute;left: 0;">
+            <h2>Left 0 absolute</h2>
+        </div>
+    </div>
+
+    <br>
+    <div class="Postioning" style="height: 200px; position: relative;top: 250px;">
+
+        <div style="background-color: red;width: 20%;position: absolute;left: auto;">
+            <h2>Left auto absolute</h2>
+        </div>
+    </div>
+
+    <br>
+    <div class="Postioning" style="height: 200px; position: relative;top: 250px;">
+
+        <div style="background-color: red;width: 20%;position: absolute;right: 100px;">
+            <h2>right 100px absolute</h2>
+        </div>
+    </div>
+    <br>
+    <div class="Postioning" style="height: 200px; position: relative;top: 250px;">
+
+        <div style="background-color: red;width: 20%;position: absolute;right: -50px;">
+            <h2>right -50px absolute</h2>
+        </div>
+    </div>
+
+    <br>
+    <div class="Postioning" style="height: 200px; position: relative;top: 250px;">
+
+        <div style="background-color: red;width: 20%;position: absolute;right: 0;">
+            <h2>right 0 absolute</h2>
+        </div>
+    </div>
+
+    <br>
+    <div class="Postioning" style="height: 200px; position: relative;top: 250px;">
+
+        <div style="background-color: red;width: 20%;position: absolute;right: auto;">
+            <h2>right auto absolute</h2>
+        </div>
+    </div>
+
+    <br>
+    <div class="Postioning" style="height: 200px; position: relative;top: 250px;">
+        <h2>z-index</h2>
+        z-index: auto;
+        <div style="background-color: red;width: 20%;position: absolute;left: 60px; z-index: auto;">
+            <h2>1</h2>
+        </div>
+        <div style="background-color: blue;width: 20%;position: absolute;left: 120px;z-index: auto;">
+            <h2>2</h2>
+        </div>
+        <div style="background-color: green;width: 20%;position: absolute;left: 200px;z-index: auto;">
+            <h2>3</h2>
+        </div>
+        <div style="background-color: aqua;width: 20%;position: absolute;left: 250px;z-index: auto;">
+            <h2>4</h2>
+        </div>
+    </div>
+
+    <br>
+    <div class="Postioning" style="height: 200px; position: relative;top: 250px;">
+        <h2>z-index</h2>
+        z-index: numebr;
+        <div style="background-color: red;width: 20%;position: absolute;left: 60px; z-index: 2;">
+            <h2>1</h2>
+        </div>
+        <div style="background-color: blue;width: 20%;position: absolute;left: 120px;z-index: 4;">
+            <h2>2</h2>
+        </div>
+        <div style="background-color: green;width: 20%;position: absolute;left: 200px;z-index: 1;">
+            <h2>3</h2>
+        </div>
+        <div style="background-color: aqua;width: 20%;position: absolute;left: 250px;z-index: 3;">
+            <h2>4</h2>
+        </div>
+    </div>
+</body></html>

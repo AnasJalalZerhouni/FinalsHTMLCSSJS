@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* ---------------------------------flexbox-------------+------------------ */
+        .flex-container {
+            display: flex;
+            background-color: DodgerBlue;
+        }
+
+        .flex-container>div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        /* ---------------------------------Animation-------------+------------------ */
+
+        @keyframes example {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+        /* The element to apply the animation to */
+        .example {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: example;
+            animation-duration: 4s;
+        }
+    </style>
+</head>
+
+<bod>
+    <!-- Flex box -->
+    <!-- Flex Direction -->
+    <h1 style="text-align: center">1-Flex box</h1>
+
+    <hr>
+
+    <h2 style="text-align: center">flex-direction</h2>
+
+    <hr>
+    <h3>column-reverse</h3>
+    <div class="flex-container" style="flex-direction: column-reverse;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <hr />
+    <h3>Row</h3>
+    <div class="flex-container" style="flex-direction: row;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <hr />
+    <h3>row-reverse</h3>
+    <div class="flex-container" style="flex-direction:  row-reverse;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <hr />
+
+    <!-- /Flex Direction -->
+
+    <h2 style="text-align: center">flex-wrap</h2>
+
+    <hr />
+
+    <h3>flex no-wrap</h3>
+    <div class="flex-container" style="flex-wrap: nowrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+    </div>
+
+    <hr />
+
+    <h3>flex wrap</h3>
+    <div class="flex-container" style="flex-wrap: wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+    </div>
+
+    <hr />
+
+    <h3>flex wrap-reverse</h3>
+    <div class="flex-container" style="flex-wrap: wrap-reverse;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+    </div>
+
+    <hr>
+
+    <h2 style="text-align: center">justify-content</h2>
+
+    <hr>
+
+    <h3>Center</h3>
+    <div class="flex-container" style="justify-content:center;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <hr>
+
+    <h3>flex-start </h3>
+    <div class="flex-container" style="justify-content: flex-start;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <hr>
+
+    <h3>flex-end </h3>
+    <div class="flex-container" style="justify-content: flex-end;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <hr>
+
+    <h3>space-arrond</h3>
+    <div class="flex-container" style="justify-content: space-around;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <hr>
+
+    <h3>space between </h3>
+    <div class="flex-container" style="justify-content: space-between;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <hr>
+
+    <h2 style="text-align: center">align items</h2>
+
+    <hr>
+
+    <h3>center</h3>
+
+    <div class="flex-container" style="height: 200px;align-items: center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+
+    <hr>
+
+    <h3>flex start</h3>
+
+    <div class="flex-container" style="height: 200px;align-items: flex-start">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+
+    <hr>
+
+    <h3>flex end</h3>
+
+    <div class="flex-container" style="height: 200px;align-items: flex-end">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <hr>
+
+    <h3>stretch</h3>
+
+    <div class="flex-container" style="height: 200px;align-items: stretch">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+
+    <hr>
+
+    <h2 style="text-align: center">align content</h2>
+    <hr>
+
+    <h3>space-between</h3>
+
+    <div class="flex-container" style="height: 600px;flex-wrap: wrap;align-content: space-between">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+    </div>
+
+    <hr>
+
+    <h3>space-arround</h3>
+
+    <div class="flex-container" style="height: 600px;flex-wrap: wrap;align-content: space-around">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+    </div>
+
+    <hr>
+    <h3>stretch</h3>
+    <div class="flex-container" style="height: 600px;flex-wrap: wrap;align-content: stretch">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+        <div>12</div>
+    </div>
+
+    <hr>
+    <h3>Perfect center</h3>
+    <div class="flex-container" style="height: 600px;justify-content: center;align-items: center;">
+        <div>1</div>
+    </div>
+
+    <hr>
+
+    <h2 style="text-align: center;">order prop</h2>
+    <div class="flex-container">
+        <div style="order: 3">1</div>
+        <div style="order: 2">2</div>
+        <div style="order: 4">3</div>
+        <div style="order: 1">4</div>
+    </div>
+
+    <hr>
+
+    <h2 style="text-align: center;">flex-grow</h2>
+    <div class="flex-container">
+        <div style="flex-grow: 1">1</div>
+        <div style="flex-grow: 1">2</div>
+        <div style="flex-grow: 8">3</div>
+    </div>
+
+    <hr>
+
+    <h2 style="text-align: center">flex-shrink</h2>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-shrink: 0">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>10</div>
+        <div>10</div>
+        <div>10</div>
+        <div>10</div>
+        <div>10</div>
+    </div>
+
+    <hr>
+
+    <h2 style="text-align: center">flex basis</h2>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-basis: 200px">3</div>
+        <div>4</div>
+    </div>
+
+    <hr>
+
+    <h2 style="text-align: center">align-self</h2>
+
+    <hr>
+    <h3>center</h3>
+    <div class="flex-container" style="height: 200px">
+        <div>1</div>
+        <div>2</div>
+        <div style="align-self: center">3</div>
+        <div>4</div>
+    </div>
+
+    <hr>
+    <h3>flex start and end</h3>
+    <div class="flex-container" style="height: 200px">
+        <div>1</div>
+        <div style="align-self: flex-start">2</div>
+        <div style="align-self: flex-end">3</div>
+        <div>4</div>
+    </div>
+
+    <hr>
+
+    <h1 style="text-align: center;flex-wrap: wrap">2-EX: flex-box : Responsive Image Grid</h1>
+    <div style="display: flex;justify-content: center;">
+
+        <iframe src="ResponsiveIMGalery.html" style="width: 80%;height: 600px;"></iframe>
+
+    </div>
+
+    <hr>
+
+    <h1 style="text-align: center;flex-wrap: wrap">2-EX: flex-box : Responsive Website using Flexbox</h1>
+    <div style="display: flex;justify-content: center;">
+
+        <iframe src="ResponsiveWebsite.html" style="width: 80%;height: 600px;"></iframe>
+
+    </div>
+
+    <hr>
+
+    <h1 style="text-align: center;">Animation</h1>
+
+</bod></html>

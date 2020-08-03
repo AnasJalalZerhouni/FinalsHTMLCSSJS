@@ -1,0 +1,126 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1 style="text-align: center;">Js Arrays</h1>
+    <h2>.push() insert object to end of array / .unshift() insert object to start of array </h2>
+    <input type="button" onclick="PSH()" value="show peeple after push() ps:people variable was empty" />
+
+    <h2>.pop() remove object from end of array / .shift() remove object from start of array </h2>
+    <input type="button" onclick="POP()" value="show length of people " />
+
+    <h2>.forEach() execute a function for each element </h2>
+    <input type="button" onclick="FREACH()" value="show all names" />
+
+    <h2>.concat() combine two arrays </h2>
+    <input type="button" onclick="concat()" value="show the two arrays" />
+
+    <h2>.filter() Return an array of all the values in the ages array that are 20 or over: </h2>
+    <input type="button" onclick="filt()" value="show" />
+    
+    
+    <h2>.sort() sort array </h2>
+    <input type="button" onclick="srt()" value="show array sorted by age" />
+
+
+    <script>
+        var people = [];
+        //Array methods 
+        //push()
+
+        function PSH() {
+            people.push({
+                nom: 'anas',
+                age: 19
+            });
+
+            alert(people[0].nom);
+        }
+
+        //.pop()
+
+
+        function POP() {
+            people.pop();
+            alert(people.length);
+        }
+
+        //.forEach(function(object){})
+        function FREACH() {
+            people = [{
+                nom: 'anas',
+                age: 19
+            }, {
+                nom: 'hamed',
+                age: 22
+            }, {
+                nom: 'Dayalo',
+                age: 52
+            }];
+
+            people.forEach(function(person) {
+                alert(person.nom);
+            });
+        }
+
+        //.concat() combine two arrays
+        function concat() {
+            var peopleT = [{
+                nom: 'dwada',
+                age: 19
+            }];
+            var twoAttays = people.concat(peopleT);
+            twoAttays.forEach(function(p) {
+                console.log(p);
+            });
+        }
+
+        //.filter() create new array with elements that pass person
+        function filt() {
+            people = [{
+                nom: 'anas',
+                age: 19
+            }, {
+                nom: 'hamed',
+                age: 22
+            }, {
+                nom: 'Dayalo',
+                age: 52
+            }];
+
+            var newPeople = people.filter(function(x) {
+                if (x.age > 20)
+                    return x;
+            });
+            newPeople.forEach(function(p) {
+                alert(p.nom);
+            });
+        }
+
+        //.sort() sort array
+
+        function srt() {
+            people = [{
+                nom: 'anas',
+                age: 19
+            }, {
+                nom: 'hamed',
+                age: 22
+            }, {
+                nom: 'Dayalo',
+                age: 52
+            }];
+
+            people.sort(function(a,b){
+                return a.age-b.age;
+            });
+
+            people.forEach(function(p){
+               alert(p.nom);
+            });
+        }
+    </script>
+</body></html>

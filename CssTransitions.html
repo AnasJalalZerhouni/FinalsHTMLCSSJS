@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <style>
+            .Transition{
+                width: 150px;
+                height: 150px;
+                background-color: red;
+                transition: width 2s, height 4s;
+                transition-timing-function: ease;
+                transition-delay: 1s;/*delay dyal 1s*/
+                transition-duration: 1s;
+            }
+            .Transition:hover{
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Transitions</h1>
+        <div class="Transition">
+            transition: width 2s,height 2s;
+            
+            div:hover {
+              width: 300px;
+            height :300px;
+            }
+            
+        </div>
+    </body>
+</html>

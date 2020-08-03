@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <style>
+        .zwaq {
+            background-color: aqua;
+            color: dimgrey;
+            font-family: fantasy;
+            padding: 0 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">DOM</h1>
+    <h2>getElementById('id')= returns element by id lol</h2>
+    <hr>
+    <h2>querySelector('css query')= returns only the first match</h2>
+    <hr>
+    <h2>getElementByClassName('class name'); return nodeList with all the matched result</h2>
+    <hr>
+    <h2>getElementByTagName('tagName ex:h1') return nodeList with all the matched tag names</h2>
+    <hr>
+    <h2>querySelectorAll('css selector'); return nodeList ...</h2>
+    <hr>
+    <button onclick="AddZwaq()">add styles to all h2 elements</button>
+    <button onclick="removeZwaq()">Remove these ugly styles</button>
+    <hr>
+    <p id="sen">salam cv <em>labas</em>?</p>
+
+    <h2 id="ndv">firstChild.nodeValue :</h2>
+    <h2 id="ndv2">firstChild.nextSibling.firstChild.nodeValue :</h2>
+    <h2 id="ndv3">lastChild.nodeValue :</h2>
+    <h2 id="ndv4">textContent :</h2>
+    <h2 id="ndv5">innerHTML :</h2>
+
+    <hr>
+
+    <h2>create elements with js</h2>
+    <h3>1-var newel = document.createElement('li');</h3>
+    <h3>2-var newTextNode = document.createTextNode('big chingus uh nana');</h3>
+    <h3>3-newel.appendChild(newTextNode);</h3>
+    <h3>4-var position = document.getElementsByTagName('ul')[0]</h3>
+    <h3>5-position.appendChild(newel)</h3>
+
+    <hr>
+
+    <h2>remove elements with js</h2>
+    <h3>1-var remel = document.getElementsByTagName('li')[0];</h3>
+    <h3>2-var containerEl = remel.parentNode;</h3>
+    <h3>3-containerEl.removeChild(remel);</h3>
+    
+    <hr>
+    
+    
+    <script>
+        function AddZwaq() {
+            var allhTwoElements = document.querySelectorAll('h2');
+            for (var i = 0; i < allhTwoElements.length; i++) {
+                allhTwoElements[i].className += ' zwaq';
+            }
+        }
+
+        function removeZwaq() {
+            var allhTwoElements = document.getElementsByTagName('h2');
+            for (var i = 0; i < allhTwoElements.length; i++) {
+                allhTwoElements[i].className = allhTwoElements[i].className.replace('zwaq', '');
+            }
+        }
+
+        document.getElementById('ndv').textContent += document.getElementById('sen').firstChild.nodeValue;
+        document.getElementById('ndv2').textContent += document.getElementById('sen').firstChild.nextSibling.firstChild.nodeValue;
+        document.getElementById('ndv3').textContent += document.getElementById('sen').lastChild.nodeValue;
+        document.getElementById('ndv4').textContent += document.getElementById('sen').textContent;
+        document.getElementById('ndv5').textContent += document.getElementById('sen').innerHTML;
+
+    </script>
+</body>
+
+</html>

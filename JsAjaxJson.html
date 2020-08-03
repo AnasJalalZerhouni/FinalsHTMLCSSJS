@@ -1,0 +1,152 @@
+<html>
+
+<body>
+    <h1 style="text-align: center;">Ajax/Json</h1>
+
+    <hr>
+
+    <h2>using Ajax with XML</h2>
+    <ul id="xmlInfos">
+    </ul>
+    <input type="button" id="GetXml" value="get Xml data" />
+
+    <hr>
+
+    <h2>using Ajax with JSON</h2>
+    <ul id="jsonInfos">
+    </ul>
+    <input type="button" id="GetJson" value="get json data" />
+
+
+
+    <hr>
+
+    <h1 style="text-align: center;">Ajax/Json USING JQUERY</h1>
+
+    <hr>
+
+    <h2>using Ajax with XML</h2>
+    <ul id="xmlInfosJQ">
+    </ul>
+    <input type="button" id="GetXmlJQ" value="get Xml data" />
+
+    <hr>
+
+    <h2>using Ajax with JSON</h2>
+    <ul id="jsonInfosJQ">
+    </ul>
+    <input type="button" id="GetJsonJQ" value="get json data" />
+
+    <hr>
+
+    <h1>Post</h1>
+
+    <h2>using Ajax with JSON $.ajax();</h2>
+    <p id="loading"></p>
+    <ul id="jsonInfosJQa">
+    </ul>
+    <input type="button" id="GetJsonJQa" value="get json data" />
+
+
+    <h2>using Ajax with JSON $.post();</h2>
+    <p id="loading"></p>
+    <ul id="jsonInfosJQaa">
+    </ul>
+    <input type="button" id="GetJsonJQaa" value="get json data" />
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script>
+        //Ajax with Xml
+        document.getElementById('GetXml').addEventListener('click', function() {
+            var xhr = new XMLHttpRequest();
+            xhr.onload = function() {
+                if (xhr.status = 200) {
+                    var ul = document.getElementById('xmlInfos');
+                    var response = xhr.responseXML;
+                    var geo = response.getElementsByTagName('geoPlugin')[0];
+                    for (var i = 0; i < geo.childNodes.length; i++) {
+                        if (geo.childNodes[i].nodeName != '#text')
+                            ul.innerHTML += '<li>' + geo.childNodes[i].nodeName + ' : ' + geo.childNodes[i].textContent + '</li>';
+
+                    }
+                }
+            }
+            xhr.open('get', 'http://www.geoplugin.net/xml.gp?ip=105.159.13.110', true);
+            xhr.send(null);
+        });
+
+        //Ajax with JSON
+        document.getElementById('GetJson').addEventListener('click', function() {
+            var xhr = new XMLHttpRequest();
+            xhr.onload = function() {
+                if (xhr.status = 200) {
+                    var ul = document.getElementById('jsonInfos');
+                    var response = JSON.parse(xhr.responseText);
+                    console.log(response);
+                    for (var i = 0; i < 10; i++) {
+                        ul.innerHTML += '<li>user id = ' + response[i].userId + ' title :' + response[i].title + '</li>';
+                    }
+
+                }
+            }
+            xhr.open('get', 'https://jsonplaceholder.typicode.com/posts', true);
+            xhr.send(null);
+        });
+
+        //USING JQUERY DUH
+
+        $(document).ready(function() {
+            $('#GetXmlJQ').on('click', function() {
+                $.get('http://www.geoplugin.net/xml.gp?ip=105.159.13.110', function(response, status) {
+                    var ul = document.getElementById('xmlInfosJQ');
+
+                    var geo = response.getElementsByTagName('geoPlugin')[0];
+                    for (var i = 0; i < geo.childNodes.length; i++) {
+                        if (geo.childNodes[i].nodeName != '#text')
+                            ul.innerHTML += '<li>' + geo.childNodes[i].nodeName + ' : ' + geo.childNodes[i].textContent + '</li>';
+
+                    }
+                });
+            });
+
+            $('#GetJsonJQ').on('click', function() {
+                $.get('https://jsonplaceholder.typicode.com/posts', function(response, status) {
+                    var ul = document.getElementById('jsonInfosJQ');
+                    console.log(response);
+                    for (var i = 0; i < 10; i++) {
+                        ul.innerHTML += '<li>user id = ' + response[i].userId + ' title :' + response[i].title + '</li>';
+                    }
+                });
+            });
+
+            // post using jquery
+            $('#GetJsonJQa').on('click', function() {
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://jsonplaceholder.typicode.com/posts',
+                    data: JSON.stringify({
+                        userId: 'dalinda'
+                    }),
+                    dataType: 'JSON',
+                    contentType: 'application/json; charset=utf-8',
+                    beforeSend: function() {
+                        document.getElementById('loading').innerHTML = 'loading';
+                    },
+                    success: function(response) {
+                        console.log(response);
+                    }
+
+                });
+            });
+
+            $('#GetJsonJQaa').on('click', function() {
+                $.post('https://jsonplaceholder.typicode.com/posts',{userId: 'dalinda'},function(response,status){
+                    console.log(response);
+                });
+            });
+        });
+    </script>
+</body></html>

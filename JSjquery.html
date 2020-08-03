@@ -1,0 +1,193 @@
+<html>
+
+<head>
+    <style>
+        h2 {
+            text-indent: 10px;
+        }
+
+        .styles {
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 style="text-align: center;">Js jquery</h1>
+    <h2>addClass</h2>
+    <div id="simp" style="border: 1px solid black;">
+        click event and add class
+    </div>
+
+    <h2>change element content</h2>
+    <h3>.text()</h3>
+    <p id="txt" style="display: contents">this is text</p><input type="button" id="txtBtn" value="change text" />
+
+    <h3>.html()</h3>
+    <p id="txt2" style="display: contents">this is text</p><input type="button" id="txtBtn2" value="change text" />
+
+    <h3>.append() / . prepend() / .before() / .after()</h3>
+    <ul id="appnd">
+        <li>hi</li>
+        <li>hello</li>
+    </ul>
+    <input type="button" id="appndBtn" value="append" />
+    <input type="button" id="prpndBtn" value="prepend" />
+    <input type="button" id="bfrBtn" value="before" />
+    <input type="button" id="afterBtn" value="after" />
+
+
+    <h3>.remove()</h3>
+    <p id="rmv">remove element</p>
+    <input type="button" id="rmvBtn" value="remove element" />
+
+    <h3>.replaceWith()</h3>
+    <p id="rplc">replace me</p>
+    <input type="button" id="rplcBtn" value="replace element" />
+
+    <hr>
+    <h2>get and set attributs values</h2>
+
+    <h3>.attr(name)=>get / .attr(name,val)=>set</h3>
+    <h3>.removeAttr(name);</h3>
+    <h3>.addClass(class name)</h3>
+    <h3>.removeClass(class name)</h3>
+
+    <hr>
+    <h2>css properties</h2>
+    <h3>.css('property name ex:margin-top')=>get / .css('property name ex:margin-top','value ex: +=15 px or 30px')=>set</h3>
+    <h3>.css({
+        background-color:red;
+        border:1px solid black;
+        });</h3>
+
+    <hr>
+    <h2>Effects</h2>
+
+    <h3>.show()</h3>
+    <p id="shw" hidden>heloooooo</p>
+    <input type="button" value="shows" id="shwbtn" />
+
+    <h3>.hide()</h3>
+    <p id="hd">heloooooo</p>
+    <input type="button" value="hide" id="hdbtn" />
+
+    <h3>.toggle()</h3>
+    <p id="tg">heloooooo</p>
+    <input type="button" value="toggle" id="tgbtn" />
+
+    <h3>.fadeIn()</h3>
+    <p id="fdin" hidden>heloooooo</p>
+    <input type="button" value="toggle" id="fdinbtn" />
+
+    <h3>.fadeOut()</h3>
+    <p id="fdot">heloooooo</p>
+    <input type="button" value="toggle" id="fdotbtn" />
+
+    <h3>.fadeToggle()</h3>
+    <p id="fdtg">heloooooo</p>
+    <input type="button" value="toggle" id="fdtgbtn" />
+
+    <h3>.sildeUp()</h3>
+    <p id="slup">heloooooo</p>
+    <input type="button" value="slide up" id="slupbtn" />
+
+    <h3>.slideDown()</h3>
+    <p id="sldn" hidden>heloooooo</p>
+    <input type="button" value="slide down" id="sldnbtn" />
+
+    <h3>.slideToggle()</h3>
+    <p id="sldtg">heloooooo</p>
+    <input type="button" value="toggle" id="sldtgbtn" />
+
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        document.getElementById('wd')
+        $(document).ready(function() {
+            $('#simp').on('click', function() {
+                $('#simp').addClass('styles');
+            });
+
+            $('#txtBtn').on('click', function() {
+                $('#txt').text('hahahaahaha');
+            });
+
+            $('#txtBtn2').on('click', function() {
+                $('#txt2').html('<b>DUH</b>');
+            });
+
+            //append prepend before after
+            $('#appndBtn').on('click', function() {
+                $('#appnd').append('<li>hola app</li>');
+
+            });
+
+            $('#prpndBtn').on('click', function() {
+                $('#appnd').prepend('<li>hola pre</li>');
+
+            });
+
+            $('#bfrBtn').on('click', function() {
+                $('#appnd').before('<p>before</p>');
+
+            });
+
+            $('#afterBtn').on('click', function() {
+                $('#appnd').after('<p>after</p>');
+
+            });
+
+            $('#rmvBtn').on('click', function() {
+                $('#rmv').remove();
+            });
+
+            $('#rplcBtn').on('click', function() {
+                $('#rplc').replaceWith('<sup>okie dokie</sup>');
+            });
+
+
+            //Effects
+            $('#shwbtn').on('click', function() {
+                $('#shw').show();
+            });
+
+            $('#hdbtn').on('click', function() {
+                $('#hd').hide();
+            });
+
+
+            $('#tgbtn').on('click', function() {
+                $('#tg').toggle();
+            });
+
+            $('#fdinbtn').on('click', function() {
+                $('#fdin').fadeIn();
+            });
+
+            $('#fdotbtn').on('click', function() {
+                $('#fdot').fadeOut();
+            });
+
+
+            $('#fdtgbtn').on('click', function() {
+                $('#fdtg').fadeToggle();
+            });
+
+            $('#slupbtn').on('click', function() {
+                $('#slup').slideUp();
+            });
+
+            $('#sldnbtn').on('click', function() {
+                $('#sldn').delay(2000).slideDown(1000);
+            });
+
+
+            $('#sldtgbtn').on('click', function() {
+                $('#sldtg').slideToggle();
+            });
+
+        });
+    </script>
+</body></html>

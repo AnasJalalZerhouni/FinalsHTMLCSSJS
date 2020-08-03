@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <style>
+        .center {
+            text-align: center;
+        }
+
+        div {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #ccc;
+        }
+
+        /*------------background color ---------------*/
+        .backgroundColorClip {
+            background-color: aqua;
+            background-clip: border-box;
+        }
+        
+        .backgroundColor {
+            background-color : darkmagenta;
+        }
+        /*------------backgorund image----------------*/
+        /*set backgound image */
+        .backgroundImage {
+            background-image: url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+            background-size: 300px 100px;
+        }
+
+        .backgoundImageRepeat {
+            background-image: url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+            background-size: 300px 100px;
+            background-repeat: repeat;
+            /*Default*/
+        }
+
+        .backgoundImagePostion {
+            background-image: url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+            background-repeat: no-repeat;
+            background-size: 300px 100px;
+            background-position: 0% 0%;
+            /*Default*/
+        }
+
+        .backgroundImageAttachment {
+            background-image: url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center bottom;
+            /*Default*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="center">Backgrounds (colors)</h1>
+    <hr>
+    <h2>background-clip : </h2>
+    <div class="backgroundColorClip">border-box</div>
+
+
+    <div class="backgroundColorClip" style="background-clip: padding-box;">
+        <p>padding-box</p>
+    </div>
+
+    <div class="backgroundColorClip" style="background-clip: content-box;">
+        <p>The background extends to the edge of the content box.</p>
+    </div>
+
+    <hr>
+
+    <h2>background-image (gradian) :</h2>
+    <div  class="backgroundColor" >DarkMagneta</div>
+    <div  class="backgroundColor" style="background-image: linear-gradient(red, blue);" >linear gradian</div>
+    <div  class="backgroundColor" style="background-image: linear-gradient(45deg,red, blue);" >linear gradian 45deg</div>
+    <div  class="backgroundColor" style="background-image: radial-gradient(green, purple);" >radial gradian</div>
+    <div  class="backgroundColor" style="background-image: radial-gradient(circle, green, purple);" >circle radial gradient</div>
+    <div  class="backgroundColor" style="background-image: radial-gradient(circle, green 0%, purple 20%, orange 100%);" >circle radial gradient</div>
+    
+    <div  class="backgroundColor" style="background-image: radial-gradient(circle closest-side, green 0%, purple 20%, orange 100%);" >circle radial gradient</div>
+    
+    <div  class="backgroundColor" style="background-image: radial-gradient(circle closest-side at 45px 45px, green 0%, purple 20%, orange 100%);" >circle radial gradient</div>
+    
+    
+    <h1 class="center">Backgrounds (images)</h1>
+
+    <hr />
+
+    <h2>background-image :</h2>
+    <div class="backgroundImage">HEY DUDE</div>
+
+    <hr />
+
+    <h2>background-Repeat :</h2>
+
+    <div class="backgroundImage">Repeat</div>
+
+    <br>
+
+    <div class="backgroundImage" style="background-repeat: no-repeat">no-repeat</div>
+
+    <br>
+
+    <div class="backgroundImage" style="background-repeat: repeat-x">repeat-x</div>
+
+    <br>
+
+    <div class="backgroundImage" style="background-repeat: repeat-y">repeat-y</div>
+
+    <hr>
+    
+     <h2>background-size :</h2>
+    
+    <div class="backgroundImage" style="background-repeat: no-repeat;background-size: auto auto;">auto auto</div>
+    <div class="backgroundImage" style="background-repeat: no-repeat;background-size: 120px 80px;">120px 80px</div>
+    <div class="backgroundImage" style="background-repeat: no-repeat;background-size: 100% 50%;">100% 50%</div>
+    <div class="backgroundImage" style="background-repeat: no-repeat;background-size: contain;">Contain</div>
+    <div class="backgroundImage" style="background-repeat: no-repeat;background-size: cover;"> cover</div>
+    <hr>
+
+    <h2>background-position :</h2>
+
+    <div class="backgoundImagePostion">0% 0%</div>
+    <br>
+
+    <div class="backgoundImagePostion" style="background-position:right center">right center</div>
+
+    <br>
+    <div class="backgoundImagePostion" style="background-position: left top">left Top</div>
+
+    <br>
+    <div class="backgoundImagePostion" style="background-position: center center">center center</div>
+
+    <h2>background-attachment :</h2>
+    <div class="backgroundImageAttachment">scroll</div>
+
+    <br>
+
+    <div class="backgroundImageAttachment" style="background-attachment: fixed;">fixed</div>
+</body></html>

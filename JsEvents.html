@@ -1,0 +1,116 @@
+<html>
+
+<body onload="alert('load event');" onunload="alert('load event');" onerror="alert('error event')" onresize="alert('resize event');" onscroll="alert('scroll event');">
+    <h1 style="text-align: center;">JS Events</h1>
+    <hr>
+    <h3>load/UnLoad events (look at the body attrs)</h3>
+    <p>unload event occure when new page is requested</p>
+
+    <hr>
+
+    <h3>keyboard events</h3>
+    <p>press 'a' to change background color</p>
+    <p>press 'r' to reset background color</p>
+
+    <hr>
+
+    <h3>mouse envents</h3>
+    <div id="mouseEvent" style="width: 50%;border: 1px solid black;">
+        <p>one click to change color to red</p>
+        <p>double click to change color to green</p>
+        <p>mousedown/mouseup to show alert</p>
+        <p>mousemove to change color to aqua</p>
+        <p>mouseover to change color to blue when hover</p>
+        <p>mouseout to change color to gray when get out of the div</p>
+    </div>
+
+
+    <hr>
+
+    <h2>form event</h2>
+    <p>focus/blur event</p>
+    <input id="focs" />
+    <br>
+    <p>input event: occure when the input (text or textArea) value change</p>
+    <input id="inpt" />
+    <br>
+    <p>change event: occure when the input (radio or checkbox or selectbox) value change</p>
+    <label for="inpt2">checkox</label>
+    <input id="inpt2" type="checkbox" />
+    <p>events submit / reset / cut / copy /past /select : u know the deal</p>
+
+
+    <script>
+        //keyboard events
+        var body = document.getElementsByTagName('body')[0];
+        //keydown
+        body.addEventListener('keydown', (event) => {
+            if (event.key == 'a')
+                body.style.backgroundColor = 'red';
+        });
+        //keypress
+        body.addEventListener('keypress', (event) => {
+            if (event.key == 'a')
+                body.style.backgroundColor = 'green';
+        });
+        //keypress
+        body.addEventListener('keyup', (event) => {
+            if (event.key == 'a')
+                body.style.backgroundColor = 'pink';
+            if (event.key == 'r')
+                body.style.backgroundColor = 'white';
+        });
+
+        //mouse events
+        var msEvent = document.getElementById('mouseEvent');
+
+        msEvent.addEventListener('click', () => {
+            msEvent.style.backgroundColor = 'red';
+        });
+
+        msEvent.addEventListener('dblclick', () => {
+            msEvent.style.backgroundColor = 'green';
+        });
+
+
+
+        /* this event override click event
+        msEvent.addEventListener('mousedown', () => {
+            alert('mouse is down i repeat mouse is down');
+        });
+        */
+
+        //this event override mouseover
+        msEvent.addEventListener('mousemove', () => {
+            msEvent.style.backgroundColor = 'aqua';
+        });
+
+        msEvent.addEventListener('mouseover', () => {
+            msEvent.style.backgroundColor = 'blue';
+        });
+
+        msEvent.addEventListener('mouseout', () => {
+            msEvent.style.backgroundColor = 'gray';
+        });
+
+        //form events
+        var fsIn = document.getElementById('focs');
+        fsIn.addEventListener('focus', () => {
+            fsIn.style.backgroundColor = 'red';
+        });
+
+        fsIn.addEventListener('blur', () => {
+            fsIn.style.backgroundColor = 'blue';
+        });
+
+        var Inpt = document.getElementById('inpt');
+        Inpt.addEventListener('input', () => {
+            alert(Inpt.value);
+        });
+        
+        var Inpt2 = document.getElementById('inpt2');
+        Inpt2.addEventListener('change', () => {
+            alert(Inpt2.checked);
+        });
+    </script>
+</body></html>
